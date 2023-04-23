@@ -8,21 +8,13 @@ This module contains several functions that perform various tasks.
 
 """
 
-
+# Import the MongoClient class
 from pymongo import MongoClient
 
-# Replace the placeholder values with your actual connection details
-MONGODB_HOST = "your_host"
-MONGODB_PORT = your_port
-MONGODB_USERNAME = "your_username"
-MONGODB_PASSWORD = "your_password"
-MONGODB_DB_NAME = "web335DB"
-
-# Connection string (URI) for MongoDB
-connection_uri = f"mongodb://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@{MONGODB_HOST}:{MONGODB_PORT}/{MONGODB_DB_NAME}?authSource=admin"
-
 # Connect to the MongoDB server and get the database
-client = MongoClient(connection_uri)
+client = MongoClient("mongodb+srv://web335_user:s3cret@bellevueuniversity.up6klva.mongodb.net/web335DB?retryWrites=true&w=majority")
+
+# Get the database
 db = client['web335DB']
 
 # Get the 'users' collection
