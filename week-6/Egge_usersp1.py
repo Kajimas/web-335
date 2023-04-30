@@ -27,7 +27,7 @@ for document in users_collection.find():
 
 # Display the document where the employeeId is 1011
 print("\nDocument with employeeId 1011:")
-document_employeeId = users_collection.find_one({'employeeId': 1011})
+document_employeeId = users_collection.find_one({'employeeId': "1011"})
 print(document_employeeId)
 
 # Display the document where the lastName is Mozart
